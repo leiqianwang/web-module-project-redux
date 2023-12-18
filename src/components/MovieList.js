@@ -9,7 +9,7 @@ import Movie from './Movie';
 
 
 const MovieList = (props)=> {
-    const movies = [];
+    const {movies }= props;
 
 
 
@@ -39,7 +39,7 @@ const MovieList = (props)=> {
 }
 
 const mapStateToProps = state => ({
-    movies: state.movies
+    movies: state.movieReducer.movies
 });
 
 export default connect(mapStateToProps)(MovieList);
